@@ -1,0 +1,45 @@
+/* --- Dashboard User Cards Grid --- */
+.user-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* Card styling */
+.user-details-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-details-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.user-details-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 12px;
+}
+
+.user-details-card p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* --- Responsive: 2 cards per row on tablet --- */
+@media (max-width: 1024px) {
+  .user-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Responsive: 1 card per row on mobile --- */
+@media (max-width: 600px) {
+  .user-cards-container {
+    grid-template-columns: 1fr;
+  }
+}
